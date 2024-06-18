@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Cruinn';
+    src: url('./fonts/Cruinn/Bold.ttf') format('truetype');
+}
+
+.header__text {
+    font-family: 'Cruinn', 'Arial';
+}
+
