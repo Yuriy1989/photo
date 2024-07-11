@@ -31,11 +31,45 @@ a {
     color: #eee;
 }
 
+.main {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+.photographer {
+    font-weight: bold;
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+
+.main .photographer:nth-child(1) {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showMain 0.5s 1s linear forwards;
+}
+
+@keyframes showMain {
+    to {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+
+
 .carousel {
     width: 100vw;
     height: 100vh;
     overflow: hidden;  /*переполняемое содержимое в блоке не отображается*/
-    margin-top: -50px;
+    margin-top: -300px;
     position: relative;
 }
 

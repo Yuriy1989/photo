@@ -3,6 +3,7 @@ let prevDom = document.getElementById('prev');
 let carouselDom = document.querySelector('.carousel');
 let listItemDom = document.querySelector('.carousel .list');
 let thumbnailDom = document.querySelector('.carousel .thumbnail');
+console.log('thumbnailDom= ', thumbnailDom);
 
 nextDom.onclick = function() {
     showSlider('next');
@@ -16,13 +17,14 @@ let timeRunning = 3000;
 let timeAutoNext = 7000;
 let runTimeOut;
 
-let runAutoRun = setTimeout(() => {
-    next.click();
-}, timeAutoNext);
+// let runAutoRun = setTimeout(() => {
+//     next.click();
+// }, timeAutoNext);
 
 function showSlider(type){
     let itemSlider = document.querySelectorAll('.carousel .list .item');
     let itemThumbnail = document.querySelectorAll('.carousel .thumbnail .item');
+    console.log('itemThumbnail', itemThumbnail);
 
     if(type === 'next') {
         listItemDom.appendChild(itemSlider[0]);
@@ -41,9 +43,9 @@ function showSlider(type){
         carouselDom.classList.remove('prev');
     }, timeRunning);
 
-    clearTimeout(runAutoRun);
-    runAutoRun = setTimeout(() => {
-        nextDom.click();
-    }, timeAutoNext);
+    // clearTimeout(runAutoRun);
+    // runAutoRun = setTimeout(() => {
+    //     nextDom.click();
+    // }, timeAutoNext);
 
 }
